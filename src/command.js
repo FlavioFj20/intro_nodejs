@@ -8,7 +8,7 @@ yargs(hideBin(process.argv))
             type: 'string'
         })
     }, async (argv) => {
-        console.log(argv)
+        console.log(argv);
     })
     .option('tags', {
         alias: 't',
