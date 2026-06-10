@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notas</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f7fb;
+        --card: #ffffff;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --accent: #2563eb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+      }
+
+      .page {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 32px 20px;
+      }
+
+      .header {
+        margin-bottom: 24px;
+        padding: 24px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+      }
+
+      .header h1 {
+        margin: 0 0 8px;
+        font-size: 2rem;
+      }
+
+      .header p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .notes {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 16px;
+      }
+
+      .note {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+      }
+
+      .note__header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+
+      .note__title {
+        margin: 0;
+        font-size: 1.2rem;
+        color: var(--accent);
+      }
+
+      .note__meta {
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .note__content {
+        margin: 0;
+        white-space: pre-wrap;
+      }
+
+      .note__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .note__tag {
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: #eff6ff;
+        color: #1d4ed8;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="header">
+        <h1>Minhas notas</h1>
+        <p>Template base para interpolar conteúdos dinâmicos no HTML.</p>
+      </section>
+
+      <ul class="notes">
+        <li class="note">
+          <div class="note__header">
+            <h2 class="note__title">Título da nota</h2>
+            <span class="note__meta">01/01/2026</span>
+          </div>
+          <p class="note__content">Conteúdo da nota vai aparecer aqui.</p>
+            {{notes}}
+          <ul class="note__tags">
+            <li class="note__tag">tag 1</li>
+            <li class="note__tag">tag 2</li>
+          </ul>
+        </li>
+
+        <li class="note">
+          <div class="note__header">
+            <h2 class="note__title">Outra nota</h2>
+            <span class="note__meta">02/01/2026</span>
+          </div>
+          <p class="note__content">Estrutura pronta para inserir mais notas.</p>
+          <ul class="note__tags">
+            <li class="note__tag">estudo</li>
+            <li class="note__tag">ideias</li>
+          </ul>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
